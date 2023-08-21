@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/assets/logo.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Michal Ciberej | Frontend Developer</title>
+    <script>
+      if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+  <body
+    class="text-text dark:text-textD bg-background dark:bg-backgroundD font-sans">
+    <div id="root"></div>
+    <script
+      type="module"
+      src="/src/main.jsx">
+          document.querySelector("#form").addEventListener("submit", (e) => {
+        e.preventDefault()
+
+        const name = document.querySelector("#name").value
+        const email = document.querySelector("#email").value
+        const subject = document.querySelector("subject").value
+        const message = document.querySelector("message").value
+
+        console.log(name, email, subject, message)
+      })
+    </script>
+  </body>
+</html>
