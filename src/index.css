@@ -62,3 +62,18 @@
   border: 2px solid #2eb279;
   outline: none;
 }
+
+.left {
+  transform: rotate3d(3, -8, 1, -50deg);
+  transition: transform 0.5s ease;
+}
+
+.right {
+  transform: rotate3d(3, 8, -1, -50deg);
+  transition: transform 0.5s ease;
+}
+
+.right:hover,
+.left:hover {
+  transform: rotate3d(0, 0, 0, 0) scale(1.1);
+}

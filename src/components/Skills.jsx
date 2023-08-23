@@ -1,7 +1,8 @@
 const Skills = () => {
   return (
-    <>
-      <div className='grid grid-cols-6 gap-6 justify-center items-center'>
+    <div className='grid container m-auto justify-center'>
+      <h3 className='text-3xl font-extrabold mb-8 text-center'>Skills</h3>
+      <div className='grid grid-cols-8 gap-6 justify-center items-center'>
         <div className='group flex flex-col justify-center'>
           <img
             src='./src/assets/html.svg'
@@ -183,7 +184,7 @@ const Skills = () => {
           </span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
