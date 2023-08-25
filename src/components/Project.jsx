@@ -1,54 +1,51 @@
-const Project = ({ thumbnail, description, techs, right, children }) => {
+import { useState } from 'react';
+
+const Project = ({ thumbnail, description, techs, children }) => {
+  const [isDisplayed, setIsDisplayed] = useState(false);
+
+  const handleDisplay = () => {
+    if (isDisplayed === false) setIsDisplayed(true);
+    else setIsDisplayed(false);
+  };
+
   return (
     <>
-      <div
-        className={
-          right === false
-            ? 'container m-auto flex justify-evenly mb-8'
-            : 'container m-auto flex justify-evenly mb-8'
-        }>
-        {right === false ? (
-          <img
-            src={thumbnail}
-            alt=''
-            className='h-60 left'
-          />
-        ) : null}
-        <div className='flex flex-col justify-around'>
-          <h4 className='text-xl font-bold'>{children}</h4>
-          <p className='text-lg max-w-prose'>{description}</p>
-          <div className='flex gap-2 items-center'>
-            {techs != null
-              ? techs.map((el, index) => (
-                  <img
-                    src={el}
-                    alt='React'
-                    key={index}
-                    className='h-12'
-                  />
-                ))
-              : null}
+      <div className='group flex flex-col text-center bg-accent p-4 rounded-xl gap-4 projectContainer'>
+        <img
+          src={thumbnail}
+          alt=''
+          className=''
+        />
+        {isDisplayed && (
+          <div>
+            <h4 className='text-xl font-bold'>{children}</h4>
+            <p className='text-lg max-w-prose'>{description}</p>
+            <div className='flex gap-2 items-center justify-center'>
+              {techs != null
+                ? techs.map((el, index) => (
+                    <img
+                      src={el}
+                      alt='React'
+                      key={index}
+                      className='h-12 rounded-lg'
+                    />
+                  ))
+                : null}
+            </div>
+            <div className='flex gap-8 justify-center'>
+              <a
+                href=''
+                className='button'>
+                Code
+              </a>
+              <a
+                href=''
+                className='button'>
+                Live demo
+              </a>
+            </div>
           </div>
-          <div className='flex gap-8'>
-            <a
-              href=''
-              className='button'>
-              Code
-            </a>
-            <a
-              href=''
-              className='button'>
-              Live demo
-            </a>
-          </div>
-        </div>
-        {right === true ? (
-          <img
-            src={thumbnail}
-            alt=''
-            className='h-60 right'
-          />
-        ) : null}
+        )}
       </div>
     </>
   );

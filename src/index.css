@@ -63,17 +63,12 @@
   outline: none;
 }
 
-.left {
-  transform: rotate3d(3, -8, 1, -50deg);
-  transition: transform 0.5s ease;
-}
-
-.right {
-  transform: rotate3d(3, 8, -1, -50deg);
-  transition: transform 0.5s ease;
-}
-
-.right:hover,
-.left:hover {
-  transform: rotate3d(0, 0, 0, 0) scale(1.1);
+.arrow::after {
+  content: '';
+  display: inline-block;
+  height: 0.5rem;
+  width: 100%;
+  border-top: 1rem solid white;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
 }

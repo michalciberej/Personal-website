@@ -21,7 +21,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className='flex justify-between container m-auto items-center py-2 mb-8'>
+      <nav className='flex justify-between container m-auto items-center pt-6 mb-8'>
         <Link to={'/'}>
           <img
             src='./src/assets/logo.svg'
@@ -31,13 +31,13 @@ const Navbar = () => {
         </Link>
         <div className='text-lg flex gap-8'>
           <a
-            className='link'
+            className='link text-xl'
             href='#'>
             Resume
           </a>
           <Link
             to={'/contactme'}
-            className='link'>
+            className='link text-xl'>
             Contact me
           </Link>
           <button
@@ -51,12 +51,12 @@ const Navbar = () => {
             {theme === 'dark' ? (
               <Icon
                 path={mdiWeatherNight}
-                size={1}
+                size={1.1}
               />
             ) : (
               <Icon
                 path={mdiWhiteBalanceSunny}
-                size={1}
+                size={1.1}
                 className=''
               />
             )}
