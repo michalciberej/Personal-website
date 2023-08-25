@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Contactme from './pages/Contactme';
 import Error from './pages/Error';
 import Thankyou from './pages/Thankyou';
+import Archive from './pages/Archive';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
   {
     path: '/thankyou',
     element: <Thankyou />,
+    errorElement: <Error />,
+  },
+  {
+    path: '/archive',
+    element: <Archive />,
     errorElement: <Error />,
   },
 ]);
