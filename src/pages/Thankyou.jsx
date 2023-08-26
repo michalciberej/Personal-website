@@ -1,5 +1,3 @@
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
 import Icon from '@mdi/react';
 import { mdiCharity } from '@mdi/js';
 import { Link } from 'react-router-dom';
@@ -7,7 +5,6 @@ import { Link } from 'react-router-dom';
 const Thankyou = () => {
   return (
     <>
-      <Navbar />
       <div className='flex flex-col justify-center container m-auto items-center text-center my-44'>
         <Icon
           path={mdiCharity}
@@ -28,7 +25,6 @@ const Thankyou = () => {
           Go home
         </Link>
       </div>
-      <Footer />
     </>
   );
 };

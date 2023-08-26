@@ -1,6 +1,6 @@
 const Skills = () => {
   return (
-    <div className='grid container m-auto justify-center'>
+    <div className='grid container m-auto justify-center mb-40'>
       <h3 className='text-3xl font-extrabold mb-8 text-center'>Skills</h3>
       <div className='grid grid-cols-12 gap-8 justify-center items-center'>
         <div className='group flex flex-col justify-center'>
