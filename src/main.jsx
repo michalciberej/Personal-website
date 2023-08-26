@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
+import Main from './pages/Main';
 import Contactme from './pages/Contactme';
 import Error from './pages/Error';
 import Thankyou from './pages/Thankyou';
@@ -11,18 +12,22 @@ import Archive from './pages/Archive';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <Main />,
     errorElement: <Error />,
-  },
-  {
-    path: '/contactme',
-    element: <Contactme />,
-    errorElement: <Error />,
-  },
-  {
-    path: '/thankyou',
-    element: <Thankyou />,
-    errorElement: <Error />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/contactme',
+        element: <Contactme />,
+      },
+      {
+        path: '/thankyou',
+        element: <Thankyou />,
+      },
+    ],
   },
   {
     path: '/archive',

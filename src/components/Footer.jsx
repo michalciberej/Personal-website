@@ -1,11 +1,15 @@
 import Icon from '@mdi/react';
 import { mdiGithub, mdiLinkedin, mdiTwitter } from '@mdi/js';
-import { Link } from 'react-router-dom';
 
-const Footer = () => {
+const Footer = ({ home }) => {
   return (
     <>
-      <footer className='flex gap-4 justify-center flex-col pt-6'>
+      <footer
+        className={
+          home === true
+            ? 'flex gap-4 justify-center flex-col pt-24 pb-4 bg-primary/30'
+            : 'flex gap-4 justify-center flex-col pt-20'
+        }>
         <div className='flex gap-4 justify-center container m-auto'>
           <a
             className='socialsBtn border-2 border-black dark:border-white hover:dark:border-primary focus:dark:border-primary'
@@ -39,17 +43,9 @@ const Footer = () => {
             />
           </a>
         </div>
-        <div className='text-center'>
-          <h6 className='text-neutral-400 text-md'>Created by me @2023</h6>
-        </div>
-        <Link
-          to='/'
-          className='h-12 w-12 self-center'>
-          <img
-            src='./src/assets/logo.svg'
-            alt='Logo'
-          />
-        </Link>
+        <h6 className='text-slate-300/50 text-md text-center'>
+          Created by me @2023
+        </h6>
       </footer>
     </>
   );

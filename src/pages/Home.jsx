@@ -1,15 +1,12 @@
 import Header from '../components/Header';
 import Skills from '../components/Skills';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
 import Projects from '../components/Projects';
 
 function Home() {
   return (
     <>
-      <Navbar />
-      <div className='min-h-screen'>
-        <div className='container grid grid-cols-2 items-center mx-auto justify-center my-32 ml-60'>
+      <div className=''>
+        <div className='min-h-screen container grid grid-cols-2 items-center mx-auto justify-center  col-span-2'>
           <div>
             <h1 className='mt-32 mb-8 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-6xl dark:text-white text-center'>
               Hello, I am Michal Ciberej and I am <Header />
@@ -35,11 +32,12 @@ function Home() {
           </div>
         </div>
       </div>
-      <Projects />
-      <div className='min-h-1/3 py-8 bg-secondary dark:bg-secondaryD'>
+      <div>
+        <Projects />
+      </div>
+      <div className='py-8'>
         <Skills />
       </div>
-      <Footer />
     </>
   );
 }

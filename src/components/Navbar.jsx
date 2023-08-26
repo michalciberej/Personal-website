@@ -31,13 +31,13 @@ const Navbar = () => {
         </Link>
         <div className='text-lg flex gap-8'>
           <a
-            className='link text-xl'
+            className='link text-xl font-semibold tracking-tight'
             href='#'>
             Resume
           </a>
           <Link
             to={'/contactme'}
-            className='link text-xl'>
+            className='link text-xl font-semibold tracking-tight'>
             Contact me
           </Link>
           <button
