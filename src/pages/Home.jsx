@@ -36,9 +36,7 @@ function Home() {
         </div>
       </div>
       <Projects />
-      <div
-        className='min-h-1/3 py-8 bg-secondary dark:bg-secondaryD'
-        id='kokos'>
+      <div className='min-h-1/3 py-8 bg-secondary dark:bg-secondaryD'>
         <Skills />
       </div>
       <Footer />

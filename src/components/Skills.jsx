@@ -2,14 +2,14 @@ const Skills = () => {
   return (
     <div className='grid container m-auto justify-center'>
       <h3 className='text-3xl font-extrabold mb-8 text-center'>Skills</h3>
-      <div className='grid grid-cols-8 gap-6 justify-center items-center'>
+      <div className='grid grid-cols-12 gap-8 justify-center items-center'>
         <div className='group flex flex-col justify-center'>
           <img
             src='./src/assets/html.svg'
             alt='HTML'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             HTML
           </span>
         </div>
@@ -19,7 +19,7 @@ const Skills = () => {
             alt='CSS'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             CSS
           </span>
         </div>
@@ -29,7 +29,7 @@ const Skills = () => {
             alt='Javascript'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             Javascript
           </span>
         </div>
@@ -39,7 +39,7 @@ const Skills = () => {
             alt='Typescript'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform '>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             Typescript
           </span>
         </div>
@@ -49,7 +49,7 @@ const Skills = () => {
             alt='Lua'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             Lua
           </span>
         </div>
@@ -59,7 +59,7 @@ const Skills = () => {
             alt='React'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             React
           </span>
         </div>
@@ -69,7 +69,7 @@ const Skills = () => {
             alt='Tailwindcss'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             Tailwindcss
           </span>
         </div>
@@ -79,7 +79,7 @@ const Skills = () => {
             alt='Sass'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             Sass
           </span>
         </div>
@@ -89,7 +89,7 @@ const Skills = () => {
             alt='NodeJs'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             NodeJs
           </span>
         </div>
@@ -99,7 +99,7 @@ const Skills = () => {
             alt='Express'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             Express
           </span>
         </div>
@@ -109,7 +109,7 @@ const Skills = () => {
             alt='MongoDB'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             MongoDB
           </span>
         </div>
@@ -119,7 +119,7 @@ const Skills = () => {
             alt='Vite'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             Vite
           </span>
         </div>
@@ -129,7 +129,7 @@ const Skills = () => {
             alt='Webpack'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             Webpack
           </span>
         </div>
@@ -139,7 +139,7 @@ const Skills = () => {
             alt='Vitest'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             Vitest
           </span>
         </div>
@@ -149,7 +149,7 @@ const Skills = () => {
             alt='Jest'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             Jest
           </span>
         </div>
@@ -159,7 +159,7 @@ const Skills = () => {
             alt='Git'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             Git
           </span>
         </div>
@@ -169,7 +169,7 @@ const Skills = () => {
             alt='Linux'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             Linux
           </span>
         </div>
@@ -179,7 +179,7 @@ const Skills = () => {
             alt='Visual Studio Code'
             className='skillIcons'
           />
-          <span className='text-center scale-0 group-hover:scale-100 transition-transform'>
+          <span className='text-center scale-0 group-hover:scale-100 transition-transform font-semibold'>
             VS Code
           </span>
         </div>

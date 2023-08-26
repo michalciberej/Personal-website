@@ -1,9 +1,10 @@
 import Icon from '@mdi/react';
-import { mdiArrowLeftThin } from '@mdi/js';
 import { Link } from 'react-router-dom';
+import { mdiArrowLeftThin } from '@mdi/js';
 import ArchiveProject from '../components/ArchiveProject';
 
 const Archive = () => {
+ 
   return (
     <div className='container py-20 mx-auto'>
       <div>
