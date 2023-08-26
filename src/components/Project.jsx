@@ -4,7 +4,7 @@ import { mdiChevronRight } from '@mdi/js';
 const Project = ({ thumbnail, description, children, link }) => {
   return (
     <>
-      <figure className='group relative rounded-xl bg-primary overflow-hidden'>
+      <figure className='group relative rounded-xl bg-secondary overflow-hidden'>
         <img
           src={thumbnail}
           alt=''

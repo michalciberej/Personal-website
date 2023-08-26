@@ -69,7 +69,7 @@ const Form = () => {
         <section className='flex flex-col col-span-2'>
           <label
             htmlFor='name'
-            className='mb-2 text-xl'>
+            className='mb-2 text-xl font-normal tracking-tight'>
             Name
           </label>
           <input
@@ -77,13 +77,13 @@ const Form = () => {
             id='text'
             name='from_name'
             onChange={handleChangeName}
-            className='bg-secondary dark:bg-secondaryD text-neutral-500 border-2 border-accent rounded-lg py-2 pl-2 outline-none focus:border-primary text-lg focus:text-text dark:focus:text-textD'
+            className='p-2 text-lg outline-none rounded-lg bg-slate-300 dark:bg-slate-300/10 text-text/70 dark:text-textD/70 border-slate-500 border-2 dark:border-slate-100/40 focus:border-primary dark:focus:text-textD focus:text-text dark:focus:border-primary'
           />
         </section>
         <section className='flex flex-col col-span-2'>
           <label
             htmlFor='email'
-            className='mb-2 text-xl'>
+            className='mb-2 text-xl font-normal tracking-tight'>
             Email
           </label>
           <input
@@ -91,13 +91,13 @@ const Form = () => {
             id='email'
             name='user_email'
             onChange={handleChangeEmail}
-            className='bg-secondary dark:bg-secondaryD text-neutral-500 border-2 border-accent rounded-lg py-2 pl-2 outline-none focus:border-primary dark:focus:text-textD text-lg focus:text-text'
+            className='p-2 text-lg outline-none rounded-lg bg-slate-300 dark:bg-slate-300/10 text-text/70 dark:text-textD/70 border-slate-500 border-2 dark:border-slate-100/40 focus:border-primary dark:focus:text-textD focus:text-text dark:focus:border-primary'
           />
         </section>
         <section className='flex flex-col col-span-4'>
           <label
             htmlFor='subject'
-            className='mb-2 text-xl'>
+            className='mb-2 text-xl font-normal tracking-tight'>
             Subject
           </label>
           <input
@@ -105,13 +105,13 @@ const Form = () => {
             id='subject'
             name='subject'
             onChange={handleChangeSubject}
-            className='bg-secondary dark:bg-secondaryD text-neutral-500 border-2 border-accent rounded-lg py-2 pl-2 outline-none focus:border-primary text-lg dark:focus:text-textD focus:text-text'
+            className='p-2 text-lg outline-none rounded-lg bg-slate-300 dark:bg-slate-300/10 text-text/70 dark:text-textD/70 border-slate-500 border-2 dark:border-slate-100/40 focus:border-primary dark:focus:text-textD focus:text-text dark:focus:border-primary'
           />
         </section>
         <section className='col-span-4 flex flex-col'>
           <label
             htmlFor='message'
-            className='mb-2 text-xl'>
+            className='mb-2 text-xl font-normal tracking-tight'>
             Message
           </label>
           <textarea
@@ -119,12 +119,12 @@ const Form = () => {
             id='message'
             name='message'
             onChange={handleChangeMessage}
-            className='bg-secondary dark:bg-secondaryD text-neutral-500 h-20 max-h-40 p-2 outline-none border-2 border-accent rounded-lg focus:border-primary text-lg dark:focus:text-textD focus:text-text'
+            className='h-20 max-h-40 p-2 text-lg outline-none rounded-lg bg-slate-300 dark:bg-slate-300/10 text-text/70 dark:text-textD/70 border-slate-500 border-2 dark:border-slate-100/40 focus:border-primary dark:focus:text-textD focus:text-text dark:focus:border-primary'
           />
         </section>
         <button
           type='submit'
-          className='button hover:text-textD text-xl col-span-3 max-w- col-start-2 col-end-4'>
+          className='button border-2 border-text dark:border-textD hover:text-textD hover:bg-text dark:hover:bg-textD dark:hover:text-text text-xl col-span-3 max-w- col-start-2 col-end-4'>
           Send
         </button>
         {error === true ? (

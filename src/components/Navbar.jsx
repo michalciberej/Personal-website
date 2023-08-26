@@ -3,7 +3,7 @@ import { mdiWhiteBalanceSunny, mdiWeatherNight } from '@mdi/js';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ home }) => {
   const [theme, setTheme] = useState(localStorage.theme);
 
   const handleThemeSwitch = () => {
@@ -21,7 +21,12 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className='flex justify-between container m-auto items-center pt-6 mb-8'>
+      <nav
+        className={
+          home === true
+            ? 'flex justify-between container mx-auto items-center pt-6 mb-64'
+            : 'flex justify-between container mx-auto items-center pt-6 mb-12'
+        }>
         <Link to={'/'}>
           <img
             src='./src/assets/logo.svg'

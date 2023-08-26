@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Contact from '../components/Contact';
+import Landing from '../components/Landing';
 
 const Main = () => {
   const { pathname } = useLocation();
@@ -28,10 +29,18 @@ const Main = () => {
     <>
       <div className='fixed w-full top-0 left-0 h-1 z-50'>
         <div
-          className='h-1 bg-gradient-to-r from-primary to-yellow-300 z-100'
+          className='h-1 bg-gradient-to-r from-primary to-secondary z-100'
           style={{ width: `${scroll}%` }}></div>
       </div>
-      <Navbar />
+      {pathname === '/' ? (
+        <div className='relative min-h-screen'>
+          <div className='background'></div>
+          <Navbar home={true} />
+          <Landing />
+        </div>
+      ) : (
+        <Navbar home={false} />
+      )}
       <Outlet />
       {pathname != '/' ? (
         <Footer home={false} />
