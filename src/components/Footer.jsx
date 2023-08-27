@@ -43,7 +43,7 @@ const Footer = ({ home }) => {
             />
           </a>
         </div>
-        <h6 className='text-slate-300/50 text-md text-center'>
+        <h6 className='text-text/50 dark:text-slate-300/50 text-md text-center'>
           Created by me @2023
         </h6>
       </footer>

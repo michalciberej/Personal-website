@@ -1,10 +1,27 @@
 import Icon from '@mdi/react';
 import { mdiChevronRight } from '@mdi/js';
 
+import { motion } from 'framer-motion';
+
 const Project = ({ thumbnail, description, children, link }) => {
+  const variants = {
+    visibleOne: {
+      opacity: 1,
+      translateY: 0,
+      transition: { duration: 1 },
+    },
+    visibleSec: { opacity: 1, translateY: 0, transition: { duration: 1.25 } },
+    visibleThr: { opacity: 1, translateY: 0, transition: { duration: 1.5 } },
+    hidden: { opacity: 0, translateY: 50 },
+  };
   return (
     <>
-      <figure className='group relative rounded-xl bg-secondary overflow-hidden'>
+      <motion.figure
+        variants={variants}
+        initial='hidden'
+        whileInView='visibleOne'
+        // viewport={{ once: true }}
+        className='group relative rounded-xl bg-secondary overflow-hidden'>
         <img
           src={thumbnail}
           alt=''
@@ -30,7 +47,7 @@ const Project = ({ thumbnail, description, children, link }) => {
             />
           </a>
         </figcaption>
-      </figure>
+      </motion.figure>
     </>
   );
 };

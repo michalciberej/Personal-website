@@ -120,7 +120,7 @@ const Testimonial = ({
         <h3 className='font-semibold text-xl tracking-tight mb-8'>
           {position}
         </h3>
-        <blockquote className='text-textD/70 font-normal text-xl max-w-lg text-center tracking-tight leading-8 mb-4'>
+        <blockquote className='text-text/70 dark:text-textD/70 font-normal text-xl max-w-lg text-center tracking-tight leading-8 mb-4'>
           {quote}
         </blockquote>
       </motion.div>
