@@ -5,7 +5,9 @@ import { mdiArrowRightThin } from '@mdi/js';
 
 const Projects = () => {
   return (
-    <div className=' mx-auto container my-40'>
+    <div
+      id='projects'
+      className=' mx-auto container my-40'>
       <h3 className='text-3xl font-extrabold mb-8 text-center tracking-tight'>
         Recent projects
       </h3>

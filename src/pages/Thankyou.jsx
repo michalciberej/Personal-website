@@ -21,7 +21,7 @@ const Thankyou = () => {
         </div>
         <Link
           to={'/'}
-          className='button text-xl hover:text-textD'>
+          className='button text-xl border-2 text-text dark:text-textD hover:text-textD border-text dark:border-textD dark:hover:bg-textD dark:hover:text-text hover:bg-text focus:text-textD  dark:focus:text-text focus:bg-text dark:focus:bg-textD shadow-md'>
           Go home
         </Link>
       </div>

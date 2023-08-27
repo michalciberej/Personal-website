@@ -13,7 +13,7 @@ const Contact = () => {
       </p>
       <Link
         to='/contactme'
-        className='text-xl font-semibold tracking-tight border-2 border-white py-2 px-4 rounded-full flex items-center group gap-1 text-textD'>
+        className='text-xl font-semibold tracking-tight border-2 border-white py-2 px-4 rounded-full flex items-center group gap-1 text-textD shadow-lg'>
         Send a message
         <Icon
           path={mdiChevronRight}

@@ -6,6 +6,30 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ home }) => {
   const [theme, setTheme] = useState(localStorage.theme);
 
+  const handleAboutmeScroll = () => {
+    const element = document.querySelector('#aboutme');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleProjectsScroll = () => {
+    const element = document.querySelector('#projects');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleSkillsScroll = () => {
+    const element = document.querySelector('#skills');
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleTestimonialsScroll = () => {
+    const element = document.querySelector('#testimonials');
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const handleThemeSwitch = () => {
     if (localStorage.theme === 'light') {
       localStorage.theme = 'dark';
@@ -35,15 +59,30 @@ const Navbar = ({ home }) => {
           />
         </Link>
         <div className='text-lg flex gap-8'>
-          <a
+          <button
             className='link text-xl font-semibold tracking-tight'
-            href='#'>
-            Resume
-          </a>
+            onClick={handleAboutmeScroll}>
+            About me
+          </button>
+          <button
+            className='link text-xl font-semibold tracking-tight'
+            onClick={handleProjectsScroll}>
+            Projects
+          </button>
+          <button
+            className='link text-xl font-semibold tracking-tight'
+            onClick={handleSkillsScroll}>
+            Skills
+          </button>
+          <button
+            className='link text-xl font-semibold tracking-tight'
+            onClick={handleTestimonialsScroll}>
+            Testimonials
+          </button>
           <Link
-            to={'/contactme'}
-            className='link text-xl font-semibold tracking-tight'>
-            Contact me
+            className='link text-xl font-semibold tracking-tight'
+            href='#projects'>
+            Resume
           </Link>
           <button
             onClick={handleThemeSwitch}

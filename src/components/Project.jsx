@@ -26,7 +26,7 @@ const Project = ({ thumbnail, description, children, link }) => {
             <Icon
               path={mdiChevronRight}
               size={0.8}
-              className='group-hover/link:translate-x-1 transition-transform'
+              className='group-hover/link:translate-x-1 transition-transform shadow-lg'
             />
           </a>
         </figcaption>

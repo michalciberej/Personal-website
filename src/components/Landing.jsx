@@ -9,7 +9,7 @@ const Landing = () => {
       <h1 className='text-3xl font-extrabold leading-tight tracking-tight text-text md:text-4xl lg:text-6xl dark:text-white mb-8'>
         Hello, I am Michal Ciberej and I am <Header />
       </h1>
-      <p className='text-2xl text-slate-700 dark:text-slate-300 font-normal leading-2 mb-32'>
+      <p className='text-2xl text-text/70 dark:text-textD/70 font-normal leading-2 mb-32'>
         My journey to becoming a self-thought frontend developer started in 2021
         when I decided to build me a ecommerce website. After a year of making
         websites with Word Press and PrestaShop. I decided that I want to be
