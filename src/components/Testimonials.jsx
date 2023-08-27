@@ -26,7 +26,6 @@ const Testimonials = () => {
       <h2 className='text-3xl tracking-tight font-semibold mb-16'>
         Testimonials
       </h2>
-
       <Carousel data={data} />
     </div>
   );
@@ -53,14 +52,16 @@ const Carousel = ({ data }) => {
           index={currentIndex}></Testimonial>
       </div>
       <div className='flex justify-center gap-4 mt-12'>
-        {data.map((el, index) => (
-          <div
-            key={index}
-            className={`dot ${
-              currentIndex === index ? 'bg-accent' : 'bg-text dark:bg-textD'
-            }`}
-            onClick={() => handleDotClick(index)}></div>
-        ))}
+        {data.length > 1
+          ? data.map((el, index) => (
+              <div
+                key={index}
+                className={`dot ${
+                  currentIndex === index ? 'bg-accent' : 'bg-text dark:bg-textD'
+                }`}
+                onClick={() => handleDotClick(index)}></div>
+            ))
+          : null}
       </div>
     </>
   );

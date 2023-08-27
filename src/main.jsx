@@ -8,6 +8,7 @@ import Contactme from './pages/Contactme';
 import Error from './pages/Error';
 import Thankyou from './pages/Thankyou';
 import Archive from './pages/Archive';
+import ScrollToTop from './components/ScrollToTop';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/archive',
-    element: <Archive />,
+    element: [<ScrollToTop />, <Archive />],
     errorElement: <Error />,
   },
 ]);
