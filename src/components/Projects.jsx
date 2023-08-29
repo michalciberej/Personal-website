@@ -2,64 +2,81 @@ import Project from './Project';
 import Icon from '@mdi/react';
 import { Link } from 'react-router-dom';
 import { mdiArrowRightThin } from '@mdi/js';
+import Animation from './Animation';
+import SectionHeading from './SectionHeading';
 
 const Projects = () => {
+  const data = [
+    {
+      name: 'name',
+      thumbnail: './src/assets/placeholder.png',
+      description: 'Messages, posting images, liking',
+      techs: [
+        './src/assets/react.svg',
+        './src/assets/nodejs.svg',
+        './src/assets/express.svg',
+        './src/assets/tailwind.svg',
+        './src/assets/mongodb.svg',
+        './src/assets/vite.svg',
+      ],
+      link: 'google.com',
+    },
+    {
+      name: 'name',
+      thumbnail: './src/assets/placeholder.png',
+      description: 'Messages, posting images, liking',
+      techs: [
+        './src/assets/react.svg',
+        './src/assets/nodejs.svg',
+        './src/assets/express.svg',
+        './src/assets/tailwind.svg',
+        './src/assets/mongodb.svg',
+        './src/assets/vite.svg',
+      ],
+      link: 'google.com',
+    },
+
+    {
+      name: 'name',
+      thumbnail: './src/assets/placeholder.png',
+      description: 'Messages, posting images, liking',
+      techs: [
+        './src/assets/react.svg',
+        './src/assets/nodejs.svg',
+        './src/assets/express.svg',
+        './src/assets/tailwind.svg',
+        './src/assets/mongodb.svg',
+        './src/assets/vite.svg',
+      ],
+      link: 'google.com',
+    },
+  ];
+
   return (
     <div
       id='projects'
-      className='mx-auto container my-40'>
-      <h3 className='text-3xl font-extrabold mb-8 text-center tracking-tight'>
-        Recent projects
-      </h3>
-      <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10'>
-        <Project
-          thumbnail={'./src/assets/placeholder.png'}
-          description={'Messages, posting images, liking'}
-          techs={[
-            './src/assets/react.svg',
-            './src/assets/nodejs.svg',
-            './src/assets/express.svg',
-            './src/assets/tailwind.svg',
-            './src/assets/mongodb.svg',
-            './src/assets/vite.svg',
-          ]}
-          right={false}
-          link={'google.com'}>
-          Facebook clone
-        </Project>
-        <Project
-          thumbnail={'./src/assets/placeholder.png'}
-          description={'lorem ipsum blablablablablabla'}
-          techs={[
-            './src/assets/react.svg',
-            './src/assets/nodejs.svg',
-            './src/assets/express.svg',
-            './src/assets/sass.svg',
-            './src/assets/mongodb.svg',
-            './src/assets/vite.svg',
-          ]}
-          right={true}>
-          Messaging app
-        </Project>
-        <Project
-          thumbnail={'./src/assets/placeholder.png'}
-          description={'lorem ipsum blablablablablabla'}
-          techs={[
-            './src/assets/react.svg',
-            './src/assets/nodejs.svg',
-            './src/assets/express.svg',
-            './src/assets/sass.svg',
-            './src/assets/mongodb.svg',
-            './src/assets/vite.svg',
-          ]}
-          right={true}>
-          Messaging app
-        </Project>
+      className='mx-auto container min-h-screen flex flex-col'>
+      <SectionHeading text='Here are some of my most recent projects'>
+        My Recent Work
+      </SectionHeading>
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 relative'>
+        {data.map((obj, index) => (
+          <Animation
+            key={index}
+            duration={1}>
+            <Project
+              thumbnail={obj.thumbnail}
+              description={obj.description}
+              link={obj.link}>
+              {obj.name}
+            </Project>
+          </Animation>
+        ))}
       </div>
       <div className='flex justify-end'>
         <Link
           to='/archive'
-          className='inline-flex group text-lg items-center   mt-4 font-semibold leading-tight'>
+          className='inline-flex group text-xl items-center mt-4 font-semibold leading-tight'>
           All projects
           <Icon
             path={mdiArrowRightThin}

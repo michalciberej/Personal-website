@@ -51,12 +51,11 @@ const Navbar = ({ home }) => {
             ? 'flex justify-between container mx-auto items-center pt-6 mb-64'
             : 'flex justify-between container mx-auto items-center pt-6 mb-12'
         }>
-        <Link to={'/'}>
-          <img
-            src='./src/assets/logo.svg'
-            alt='logo'
-            className='h-12'
-          />
+        <Link
+          to={'/'}
+          className=''>
+          <span className='logo text-3xl'>Michal</span>
+          <span className='logo text-accent text-4xl'>.</span>
         </Link>
         <div className='text-lg flex gap-8'>
           <button

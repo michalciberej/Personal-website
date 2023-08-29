@@ -1,4 +1,5 @@
 import Icon from '@mdi/react';
+import { Link } from 'react-router-dom';
 import { mdiGithub, mdiLinkedin, mdiTwitter } from '@mdi/js';
 
 const Footer = ({ home }) => {
@@ -7,9 +8,15 @@ const Footer = ({ home }) => {
       <footer
         className={
           home === true
-            ? 'flex gap-4 justify-center flex-col pt-24 pb-4 bg-primary/30'
-            : 'flex gap-4 justify-center flex-col pt-20'
+            ? 'flex gap-4 justify-center items-center flex-col pt-24 pb-4 bg-primary/30'
+            : 'flex gap-4 justify-center items-center flex-col pt-20'
         }>
+        <Link
+          to={'/'}
+          className=''>
+          <span className='logo text-3xl'>Michal</span>
+          <span className='logo text-accent text-4xl'>.</span>
+        </Link>
         <div className='flex gap-4 justify-center container m-auto'>
           <a
             className='socialsBtn border-2 border-black dark:border-white hover:dark:border-primary focus:dark:border-primary'
