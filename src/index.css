@@ -107,6 +107,10 @@ body::-webkit-scrollbar {
   transform: translateX(-50%);
 }
 
+.opened {
+  height: 150px;
+}
+
 .mouse {
   width: 30px;
   height: 55px;
