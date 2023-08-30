@@ -3,7 +3,6 @@ const Landing = () => {
     <div className='container flex flex-col mx-auto text-center justify-center items-center pt-12'>
       <h1 className='text-3xl font-extrabold leading-tight tracking-tight text-text md:text-4xl lg:text-6xl dark:text-white mb-8'>
         Hey, I am Michal Ciberej
-        {/* <Header /> */}
       </h1>
       <p className='text-2xl text-text/70 dark:text-textD/70 font-normal leading-2 mb-48'>
         My journey to becoming a self-thought frontend developer started in 2021

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import SectionHeading from './SectionHeading';
 
 const Testimonials = () => {
   const data = [
@@ -23,9 +24,9 @@ const Testimonials = () => {
     <div
       id='testimonials'
       className='container mx-auto flex flex-col justify-center items-center mb-20'>
-      <h2 className='text-3xl tracking-tight font-semibold mb-16'>
-        Testimonials
-      </h2>
+      <SectionHeading text='Few people had nice some nice things to say about me'>
+        TESTEMONIALS
+      </SectionHeading>
       <Carousel data={data} />
     </div>
   );
