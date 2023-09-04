@@ -7,7 +7,7 @@ const Footer = ({ home }) => {
       <footer
         className={
           home === true
-            ? 'flex gap-4 justify-center items-center flex-col pt-24 pb-4 bg-primary/30'
+            ? 'flex gap-4 justify-center items-center flex-col md:pt-24 pt-52 pb-4 bg-primary/30'
             : 'flex gap-4 justify-center items-center flex-col pt-20'
         }>
         <Link

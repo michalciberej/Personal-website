@@ -35,40 +35,42 @@ const Navbar = ({ home }) => {
 
   return (
     <>
-      <nav
-        className={
-          home
-            ? 'flex justify-between container mx-auto items-center pt-6 pb-4 mb-64 p-10'
-            : 'flex justify-between container mx-auto items-center pt-6 mb-12'
-        }>
-        <Link
-          to={'/'}
-          className=''>
-          <span className='logo text-3xl'>Michal</span>
-          <span className='logo text-accent text-4xl'>.</span>
-        </Link>
-        {isDesktop ? (
-          <DesktopMenu />
-        ) : (
-          <button
-            type='button'
-            onClick={handleMenuOpen}>
-            <Icon
-              path={mdiMenu}
-              size={1.5}
+      <header>
+        <nav
+          className={
+            home
+              ? 'flex justify-between md:container mx-auto items-center pt-6 mb-64 px-10 md:px-0'
+              : 'flex justify-between container mx-auto items-center pt-6  mb-12'
+          }>
+          <Link
+            to={'/'}
+            className=''>
+            <span className='logo text-3xl'>Michal</span>
+            <span className='logo text-accent text-4xl'>.</span>
+          </Link>
+          {isDesktop ? (
+            <DesktopMenu />
+          ) : (
+            <button
+              type='button'
+              onClick={handleMenuOpen}>
+              <Icon
+                path={mdiMenu}
+                size={1.5}
+              />
+            </button>
+          )}
+          {!isDesktop && (
+            <MobileMenu
+              isOpened={isOpened}
+              setIsOpened={setIsOpened}
+              home={home}
+              isDesktop={isDesktop}
+              handleMenuOpen={handleMenuOpen}
             />
-          </button>
-        )}
-        {!isDesktop && (
-          <MobileMenu
-            isOpened={isOpened}
-            setIsOpened={setIsOpened}
-            home={home}
-            isDesktop={isDesktop}
-            handleMenuOpen={handleMenuOpen}
-          />
-        )}
-      </nav>
+          )}
+        </nav>
+      </header>
     </>
   );
 };
@@ -109,27 +111,35 @@ const DesktopMenu = () => {
     }
   };
   return (
-    <div className='text-lg flex gap-8'>
-      <button
-        className='link text-xl font-semibold tracking-tight'
-        onClick={handleAboutmeScroll}>
-        About me
-      </button>
-      <button
-        className='link text-xl font-semibold tracking-tight'
-        onClick={handleProjectsScroll}>
-        Projects
-      </button>
-      <button
-        className='link text-xl font-semibold tracking-tight'
-        onClick={handleTestimonialsScroll}>
-        Testimonials
-      </button>
-      <Link
-        className='link text-xl font-semibold tracking-tight'
-        href='#projects'>
-        Resume
-      </Link>
+    <ul className='text-lg flex gap-8'>
+      <li>
+        <button
+          className='link text-xl font-semibold tracking-tight'
+          onClick={handleAboutmeScroll}>
+          About me
+        </button>
+      </li>
+      <li>
+        <button
+          className='link text-xl font-semibold tracking-tight'
+          onClick={handleProjectsScroll}>
+          Projects
+        </button>
+      </li>
+      <li>
+        <button
+          className='link text-xl font-semibold tracking-tight'
+          onClick={handleTestimonialsScroll}>
+          Testimonials
+        </button>
+      </li>
+      <li>
+        <Link
+          className='link text-xl font-semibold tracking-tight'
+          href='#projects'>
+          Resume
+        </Link>
+      </li>
       <button
         onClick={handleThemeSwitch}
         type='button'
@@ -151,7 +161,7 @@ const DesktopMenu = () => {
           />
         )}
       </button>
-    </div>
+    </ul>
   );
 };
 
@@ -250,7 +260,7 @@ const MobileMenu = ({ isOpened, setIsOpened, handleMenuOpen }) => {
       <AnimatePresence>
         {isOpened && (
           <motion.div
-            className='origin-top absolute left-0 top-0 w-full h-screen bg-secondary p-10 z-50'
+            className='origin-top absolute left-0 top-0 w-full h-screen bg-primary px-10 pt-6 z-50'
             variants={variants}
             initial='initial'
             animate='animate'
@@ -260,7 +270,7 @@ const MobileMenu = ({ isOpened, setIsOpened, handleMenuOpen }) => {
               initial={{ opacity: 0 }}
               animate='open'
               exit='exit'>
-              <div className='flex justify-between container mx-auto w-full '>
+              <div className='flex justify-between mx-auto w-full'>
                 <Link
                   to={'/'}
                   className=''>
@@ -326,7 +336,8 @@ const MobileMenu = ({ isOpened, setIsOpened, handleMenuOpen }) => {
               variants={otherVariants}
               initial={{ opacity: 0 }}
               animate='open'
-              exit='exit'>
+              exit='exit'
+              className='-mt-10'>
               <Socials />
             </motion.div>
           </motion.div>

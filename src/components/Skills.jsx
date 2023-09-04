@@ -4,7 +4,7 @@ const Skills = () => {
       id='skills'
       className='group flex flex-col'>
       <div className='flex flex-col items-center'>
-        <h1 className="text-3xl text-center tracking-wider font-extrabold mb-12 before:block before:w-[calc(100%_+_1rem)] before:opacity-50 group-hover:before:opacity-100 before:h-[0.25rem] before:content-[''] before:bg-accent before:absolute relative z-20 before:translate-y-8 before:-z-10 group-hover:before:h-4 group-hover:before:translate-y-6 before:-translate-x-[0.5rem] before:transition-all before:rounded-sm">
+        <h1 className="text-3xl text-center tracking-wider font-extrabold mb-12 before:block before:w-[calc(100%_+_1rem)] before:opacity-50 group-hover:before:opacity-100 before:h-1 before:content-[''] before:bg-accent before:absolute relative z-20 before:translate-y-8 before:-z-10 group-hover:before:h-4 group-hover:before:translate-y-6 before:-translate-x-[0.5rem] before:transition-all before:rounded-sm">
           My Skills
         </h1>
       </div>

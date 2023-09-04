@@ -61,7 +61,7 @@ const Projects = () => {
       <SectionHeading text='Here are some of my most recent projects'>
         RECENT WORK
       </SectionHeading>
-      <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 relative'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-8 relative px-10 lg:px-0'>
         {data.map((obj, index) => (
           <Animation
             key={index}
@@ -75,7 +75,7 @@ const Projects = () => {
           </Animation>
         ))}
       </div>
-      <div className='flex justify-end'>
+      <div className='flex justify-end mr-10 md:mr-0'>
         <Link
           to='/archive'
           className='inline-flex group text-xl items-center mt-4 font-semibold leading-tight'>
