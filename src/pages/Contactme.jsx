@@ -3,8 +3,8 @@ import Form from '../components/Form';
 const Contactme = () => {
   return (
     <>
-      <div className='container m-auto max-w-2xl'>
-        <h1 className='mt-12 mb-8 text-2xl font-extrabold leading-none tracking-tight text-text md:text-3xl lg:text-4xl dark:text-textD text-center'>
+      <div className='container m-auto'>
+        <h1 className=' mb-24 text-2xl font-extrabold leading-none tracking-tight text-text md:text-3xl lg:text-3xl dark:text-textD text-center max-w-xl mx-auto'>
           Thank you for taking your time to send me a message. How can I help
           you?
         </h1>

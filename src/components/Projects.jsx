@@ -55,13 +55,11 @@ const Projects = () => {
   ];
 
   return (
-    <div
-      id='projects'
-      className='mx-auto container min-h-screen flex flex-col'>
+    <div className='container mx-auto flex flex-col mb-20'>
       <SectionHeading text='Here are some of my most recent projects'>
         RECENT WORK
       </SectionHeading>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-8 relative px-10 lg:px-0'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-8 relative mb-10'>
         {data.map((obj, index) => (
           <Animation
             key={index}
@@ -75,7 +73,7 @@ const Projects = () => {
           </Animation>
         ))}
       </div>
-      <div className='flex justify-end mr-10 md:mr-0'>
+      <div className='flex justify-center md:justify-end mr-0 md:mr-10'>
         <Link
           to='/archive'
           className='inline-flex group text-xl items-center mt-4 font-semibold leading-tight'>
@@ -94,13 +92,13 @@ const Projects = () => {
 const Project = ({ thumbnail, description, children, link }) => {
   return (
     <>
-      <figure className='group relative rounded-xl bg-secondary overflow-hidden'>
+      <figure className='group relative rounded-xl bg-secondary overflow-hidden h-full'>
         <img
           src={thumbnail}
           alt=''
-          className='rounded-xl group-hover:scale-110 group-hover:opacity-0 overlay transform-gpu'
+          className='rounded-xl group-hover:scale-110 group-hover:opacity-0 overlay h-full'
         />
-        <figcaption className='absolute flex flex-col justify-around items-center font-semibold tracking-tight  top-0 left-0 right-0 bottom-0'>
+        <figcaption className='absolute flex flex-col justify-around items-center font-semibold tracking-tight top-0 left-0 right-0 bottom-0'>
           <h1 className='text-2xl opacity-0 group-hover:opacity-100 overlay'>
             {children}
           </h1>
@@ -111,7 +109,7 @@ const Project = ({ thumbnail, description, children, link }) => {
             href={link}
             target='_blank'
             rel='noreferrer'
-            className='opacity-0 group-hover:opacity-100 hover:bg-primary  overlay text-xl px-4 py-1 rounded-full border-2 border-primary transform-gpu flex items-center group/link gap-1'>
+            className='opacity-0 group-hover:opacity-100 hover:bg-primary  overlay text-xl px-4 py-1 rounded-full border-2 border-primary  flex items-center group/link gap-1'>
             Live Demo
             <Icon
               path={mdiChevronRight}

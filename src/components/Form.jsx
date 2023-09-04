@@ -65,7 +65,7 @@ const Form = () => {
         id='form'
         onSubmit={handleSubmit}
         ref={form}
-        className='grid grid-cols-4 grid-rows-2 gap-8 container mx-auto my-16 max-w-2xl'>
+        className='grid grid-cols-4 grid-rows-2 gap-8 container mx-auto mb-4 max-w-2xl'>
         <section className='flex flex-col col-span-2'>
           <label
             htmlFor='name'

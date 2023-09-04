@@ -5,7 +5,7 @@ const Animation = ({ children, duration }) => {
     visible: {
       opacity: 1,
       translateY: 0,
-      transition: { duration: duration, delay: duration },
+      transition: { duration: duration, staggerChildren: duration },
     },
     hidden: { opacity: 0, translateY: 50 },
   };

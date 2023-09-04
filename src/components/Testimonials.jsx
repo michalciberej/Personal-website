@@ -21,10 +21,8 @@ const Testimonials = () => {
   ];
 
   return (
-    <div
-      id='testimonials'
-      className='container mx-auto flex flex-col justify-center items-center mb-20'>
-      <SectionHeading text='Few people had nice some nice things to say about me'>
+    <div className='container mx-auto flex flex-col justify-center items-center mb-40'>
+      <SectionHeading text='Few people had some nice things to say about me'>
         TESTEMONIALS
       </SectionHeading>
       <Carousel data={data} />
@@ -104,7 +102,7 @@ const Testimonial = ({
   return (
     <AnimatePresence>
       <motion.div
-        className='flex flex-col justify-center items-center absolute top-0'
+        className='flex flex-col justify-center items-center absolute top-0 container mx-auto '
         variants={slideVariants}
         animate='visible'
         exit='exit'
@@ -122,7 +120,7 @@ const Testimonial = ({
           {position}
         </h3>
         <blockquote className='text-text/70 dark:text-textD/70 font-normal text-xl max-w-lg text-center tracking-tight leading-8 mb-4'>
-          {quote}
+          "{quote}"
         </blockquote>
       </motion.div>
     </AnimatePresence>

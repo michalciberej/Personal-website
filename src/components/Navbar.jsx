@@ -34,44 +34,40 @@ const Navbar = ({ home }) => {
   });
 
   return (
-    <>
-      <header>
-        <nav
-          className={
-            home
-              ? 'flex justify-between md:container mx-auto items-center pt-6 mb-64 px-10 md:px-0'
-              : 'flex justify-between container mx-auto items-center pt-6  mb-12'
-          }>
-          <Link
-            to={'/'}
-            className=''>
-            <span className='logo text-3xl'>Michal</span>
-            <span className='logo text-accent text-4xl'>.</span>
-          </Link>
-          {isDesktop ? (
-            <DesktopMenu />
-          ) : (
-            <button
-              type='button'
-              onClick={handleMenuOpen}>
-              <Icon
-                path={mdiMenu}
-                size={1.5}
-              />
-            </button>
-          )}
-          {!isDesktop && (
-            <MobileMenu
-              isOpened={isOpened}
-              setIsOpened={setIsOpened}
-              home={home}
-              isDesktop={isDesktop}
-              handleMenuOpen={handleMenuOpen}
+    <header>
+      <nav
+        className={`flex justify-between container mx-auto items-center pt-5 mb-12 ${
+          home && 'mb-64'
+        }`}>
+        <Link
+          to={'/'}
+          className=''>
+          <span className='logo text-3xl'>Michal</span>
+          <span className='logo text-accent text-4xl'>.</span>
+        </Link>
+        {isDesktop ? (
+          <DesktopMenu />
+        ) : (
+          <button
+            type='button'
+            onClick={handleMenuOpen}>
+            <Icon
+              path={mdiMenu}
+              size={1.5}
             />
-          )}
-        </nav>
-      </header>
-    </>
+          </button>
+        )}
+        {!isDesktop && (
+          <MobileMenu
+            isOpened={isOpened}
+            setIsOpened={setIsOpened}
+            home={home}
+            isDesktop={isDesktop}
+            handleMenuOpen={handleMenuOpen}
+          />
+        )}
+      </nav>
+    </header>
   );
 };
 
@@ -136,7 +132,7 @@ const DesktopMenu = () => {
       <li>
         <Link
           className='link text-xl font-semibold tracking-tight'
-          href='#projects'>
+          href='#'>
           Resume
         </Link>
       </li>
@@ -270,7 +266,7 @@ const MobileMenu = ({ isOpened, setIsOpened, handleMenuOpen }) => {
               initial={{ opacity: 0 }}
               animate='open'
               exit='exit'>
-              <div className='flex justify-between mx-auto w-full'>
+              <div className='flex justify-between'>
                 <Link
                   to={'/'}
                   className=''>
@@ -287,51 +283,51 @@ const MobileMenu = ({ isOpened, setIsOpened, handleMenuOpen }) => {
                 </button>
               </div>
             </motion.div>
-            <motion.div
+            <motion.ul
               variants={containerVariants}
               initial='initial'
               animate='open'
               exit='initial'
               className='flex flex-col h-full justify-center items-center gap-8 -mt-16 '>
-              <div className='overflow-hidden'>
+              <li className='overflow-hidden'>
                 <motion.button
                   className='link text-4xl font-semibold tracking-tight'
                   variants={linkVariants}
                   onClick={handleAboutmeScroll}>
                   About me
                 </motion.button>
-              </div>
-              <div className='overflow-hidden'>
+              </li>
+              <li className='overflow-hidden'>
                 <motion.button
                   className='link text-4xl font-semibold tracking-tight'
                   variants={linkVariants}
                   onClick={handleProjectsScroll}>
                   Projects
                 </motion.button>
-              </div>
-              <div className='overflow-hidden'>
+              </li>
+              <li className='overflow-hidden'>
                 <motion.button
                   className='link text-4xl font-semibold tracking-tight'
                   variants={linkVariants}
                   onClick={handleTestimonialsScroll}>
                   Testemonials
                 </motion.button>
-              </div>
-              <div className='overflow-hidden'>
+              </li>
+              <li className='overflow-hidden'>
                 <motion.button
                   className='link text-4xl font-semibold tracking-tight'
                   variants={linkVariants}>
                   Resume
                 </motion.button>
-              </div>
-              <div className='overflow-hidden'>
+              </li>
+              <li className='overflow-hidden'>
                 <motion.div
                   className='link text-4xl font-semibold tracking-tight hover:text-textD/40'
                   variants={linkVariants}>
                   <Link to='/contactme'>Contact me</Link>
                 </motion.div>
-              </div>
-            </motion.div>
+              </li>
+            </motion.ul>
             <motion.div
               variants={otherVariants}
               initial={{ opacity: 0 }}

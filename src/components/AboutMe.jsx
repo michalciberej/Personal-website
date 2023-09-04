@@ -6,14 +6,12 @@ import { mdiDownload } from '@mdi/js';
 
 const AboutMe = () => {
   return (
-    <div
-      id='aboutme'
-      className='container mx-auto min-h-screen'>
+    <div className='container mx-auto flex flex-col justify-center items-center mb-20'>
       <SectionHeading text='Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology'>
         ABOUT ME
       </SectionHeading>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-20 justify-center px-10 md:px-0'>
-        <div className='group max-w-prose flex flex-col items-center'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-20 justify-center text-center md:text-left'>
+        <div className='group max-w-prose flex flex-col items-center mx-auto my-10 md:my-0'>
           <h2 className="text-3xl text-center tracking-wider font-extrabold mb-12 before:block before:w-[calc(100%_+_1rem)] before:opacity-50 group-hover:before:opacity-100 before:h-1 before:content-[''] before:bg-accent before:absolute relative z-20 before:translate-y-8 before:-z-10 group-hover:before:h-4 group-hover:before:translate-y-6 before:-translate-x-[0.5rem] before:transition-all before:rounded-sm">
             Get to know me!
           </h2>
