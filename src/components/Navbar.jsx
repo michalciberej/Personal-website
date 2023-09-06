@@ -33,17 +33,33 @@ const Navbar = ({ home }) => {
     return () => window.removeEventListener('resize', updateMedia);
   });
 
+  const variants = {
+    initial: {
+      y: '-4rem',
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: 1.5,
+      },
+    },
+  };
+
   return (
     <header>
-      <nav
-        className={`flex justify-between container mx-auto items-center pt-5 mb-12 ${
-          home && 'mb-64'
-        }`}>
+      <motion.nav
+        className='fixed left-0 right-0 z-50 flex justify-between container mx-auto items-end pt-5 mb-12'
+        variants={variants}
+        initial='initial'
+        animate='animate'>
         <Link
           to={'/'}
           className=''>
           <span className='logo text-3xl'>Michal</span>
-          <span className='logo text-accent text-4xl'>.</span>
+          <span className='logo text-3xl text-accent'>.</span>
         </Link>
         {isDesktop ? (
           <DesktopMenu />
@@ -66,7 +82,7 @@ const Navbar = ({ home }) => {
             handleMenuOpen={handleMenuOpen}
           />
         )}
-      </nav>
+      </motion.nav>
     </header>
   );
 };
@@ -107,7 +123,7 @@ const DesktopMenu = () => {
     }
   };
   return (
-    <ul className='text-lg flex gap-8'>
+    <ul className='text-lg flex gap-8 bg-clip-text text-transparent bg-blend-difference bg-textD mix-blend-difference'>
       <li>
         <button
           className='link text-xl font-semibold tracking-tight'

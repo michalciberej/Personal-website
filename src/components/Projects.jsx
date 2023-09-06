@@ -1,7 +1,6 @@
 import Icon from '@mdi/react';
 import { Link } from 'react-router-dom';
 import { mdiArrowRightThin, mdiChevronRight } from '@mdi/js';
-import Animation from './Animation';
 import SectionHeading from './SectionHeading';
 
 const Projects = () => {
@@ -59,20 +58,7 @@ const Projects = () => {
       <SectionHeading text='Here are some of my most recent projects'>
         RECENT WORK
       </SectionHeading>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-8 relative mb-10'>
-        {data.map((obj, index) => (
-          <Animation
-            key={index}
-            duration={1}>
-            <Project
-              thumbnail={obj.thumbnail}
-              description={obj.description}
-              link={obj.link}>
-              {obj.name}
-            </Project>
-          </Animation>
-        ))}
-      </div>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-8 relative mb-10'></div>
       <div className='flex justify-center md:justify-end mr-0 md:mr-10'>
         <Link
           to='/archive'

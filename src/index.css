@@ -7,22 +7,23 @@
   src: local('YellowTail'),
     url('./fonts/Yellowtail-Regular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Sora';
+  src: local('Sora'), url('./fonts/Sora.ttf') format('truetype');
+}
 
 * {
-  font-family: 'Roboto', 'Ubuntu', 'sans-serif';
+  font-family: 'Sora';
+  padding: 0;
+  margin: 0;
+}
+
+::selection {
+  background-color: gray;
 }
 
 .logo {
   font-family: 'YellowTail';
-}
-
-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 
 .link {
@@ -76,10 +77,6 @@ body::-webkit-scrollbar {
   transition: background-color 0.33s ease;
 }
 
-.overlay {
-  transition: all 0.33s ease-in-out;
-}
-
 .dot {
   width: 15px;
   height: 15px;
@@ -87,64 +84,18 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 
-.background {
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform-origin: center;
-  filter: blur(calc(35rem / 5));
-  background-image: linear-gradient(#2eb279, #df870c);
-  animation: background 15s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
-  border-radius: 100%;
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.test {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+::-webkit-scrollbar-track {
+  background: #242424;
 }
 
-.opened {
-  height: 150px;
+::-webkit-scrollbar-thumb {
+  background: #ead6a6;
 }
 
-.mouse {
-  width: 30px;
-  height: 55px;
-  border: 3px solid white;
-  border-radius: 60px;
-  position: relative;
-  transition: all 1.5s ease;
-}
-
-.mouse::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  border-radius: 50%;
-  opacity: 1;
-  animation: wheel 1.5s infinite;
-  -webkit-animation: wheel 1.5s infinite;
-}
-
-@keyframes wheel {
-  to {
-    opacity: 0;
-    top: 30px;
-  }
-}
-
-@keyframes background {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+::-webkit-scrollbar-thumb:hover {
+  background: #e4b381;
 }
