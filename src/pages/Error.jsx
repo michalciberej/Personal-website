@@ -1,30 +1,14 @@
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
-import Icon from '@mdi/react';
-import { mdiWebOff } from '@mdi/js';
-import { Link } from 'react-router-dom';
-
 const Error = () => {
   return (
     <>
-      <Navbar />
-      <div className='flex flex-col justify-center container m-auto items-center text-center my-44'>
-        <Icon
-          path={mdiWebOff}
-          size={4}
-          className='text-primary mb-8'
-        />
-        <div>
-          <h1 className='text-4xl mb-4 font-bold'>Looks like you're lost</h1>
-          <h3 className='text-2xl mb-16'>Maybe try different page?</h3>
-        </div>
-        <Link
-          to={'/'}
-          className='button text-xl border-2 text-text dark:text-textD hover:text-textD border-text dark:border-textD dark:hover:bg-textD dark:hover:text-text hover:bg-text focus:text-textD  dark:focus:text-text focus:bg-text dark:focus:bg-textD shadow-md'>
-          Go home
-        </Link>
+      <div className='bg-backgroundD w-full h-screen flex justify-center items-center text-textD'>
+        <h1 className='flex text-xl items-center'>
+          <span className="after:content-[''] after:inline-block after:bg-red-300 after:h-full after:w-[1px] pr-4 border-r-2 border-textD leading-none">
+            404
+          </span>
+          <span className='pl-4'>PAGE NOT FOUND</span>
+        </h1>
       </div>
-      <Footer />
     </>
   );
 };
