@@ -1,26 +1,27 @@
 import { Link } from 'react-router-dom';
-import Socials from './Socials';
 
-const Footer = ({ home }) => {
+const Footer = () => {
+  const handleHomeScroll = (e) => {
+    e.preventDefault();
+    const element = document.querySelector('#home');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
-      <footer
-        className={
-          home === true
-            ? 'flex gap-4 justify-center items-center flex-col md:pt-24 pt-52 pb-4 bg-primary/30'
-            : 'flex gap-4 justify-center items-center flex-col pt-20'
-        }>
+      <div className='flex gap-1 justify-center items-center flex-col bg-transparent pt-4 text-text'>
         <Link
-          to={'/'}
-          className=''>
-          <span className='logo text-3xl'>Michal</span>
-          <span className='logo text-accent text-4xl'>.</span>
+          onClick={handleHomeScroll}
+          to={'#home'}
+          className='outline-none focus:scale-125 hover:scale-125 transition-transform logo text-3xl'>
+          Michal
         </Link>
-        <Socials />
-        <h6 className='text-text/50 dark:text-slate-300/50 text-md text-center'>
+        <p className='text-text/50 dark:text-text/70 text-md text-center pb-1'>
           Created by me @2023
-        </h6>
-      </footer>
+        </p>
+      </div>
     </>
   );
 };
