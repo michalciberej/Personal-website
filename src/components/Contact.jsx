@@ -1,28 +1,39 @@
-import { Link } from 'react-router-dom';
-import Icon from '@mdi/react';
-import { mdiChevronRight } from '@mdi/js';
+import Form from './Form';
+import SectionHeading from './SectionHeading';
+import Socials from './Socials';
 
 const Contact = () => {
   return (
     <>
-      <div className='md:container md:mx-auto mx-12 bg-primary rounded-xl py-8 px-12  flex flex-col md:flex-row items-center justify-around shadow-[0px_5px_5px_1px_rgba(0,0,0,0.35)] md:-mb-16 -mb-44 z-10 gap-6 md:gap-0'>
-        <h1 className='text-3xl font-semibold tracking-tight text-textD'>
-          Want to create a project?
-        </h1>
-        <p className='max-w-sm tracking-tight leading-snug text-lg font-medium text-textD/90 text-center '>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        </p>
-        <Link
-          to='/contactme'
-          className='text-xl font-semibold tracking-tight border-2 border-textD py-2 px-4 rounded-full flex items-center group gap-1 text-textD shadow-lg'>
-          Send a message
-          <Icon
-            path={mdiChevronRight}
-            size={1}
-            className='group-hover:translate-x-1 transition-transform'
-          />
-        </Link>
-      </div>
+      <section id='contact'>
+        <div className='flex flex-col items-start mx-[4vw] md:mx-[10vw] pb-20 bg-transparent text-text -mt-32'>
+          <SectionHeading
+            num='03'
+            black={true}>
+            Contact
+          </SectionHeading>
+          <div className='grid grid-rows-1 gap-20 lg:gap-0 lg:grid-cols-2 md:grid-rows-1 w-full'>
+            <div>
+              <p className='text-xl md:pl-12 flex flex-col gap-4'>
+                <span className='block'>
+                  I am currently looking for an opportunity.
+                </span>
+                <span className='block'>
+                  Send me a messege and I will get to you asap.
+                </span>
+              </p>
+              <p></p>
+            </div>
+            <div className='flex gap-8 w-full max-w-[35rem] mx-auto'>
+              <Socials
+                column={true}
+                black={true}
+              />
+              <Form />
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
