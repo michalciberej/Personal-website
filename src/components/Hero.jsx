@@ -1,74 +1,36 @@
-import { motion } from 'framer-motion';
+import lines from '../assets/lines.svg';
 
 const Hero = () => {
-  const textVariants = {
-    initial: {
-      y: '30vh',
-      transition: {
-        duration: 0.5,
-        ease: [0.37, 0, 0.63, 1],
-      },
-    },
-    animate: {
-      y: 0,
-      transition: {
-        duration: 0.7,
-        ease: [0, 0.55, 0.45, 1],
-      },
-    },
-  };
-  const containerVariants = {
-    initial: {
-      transition: {
-        delayChildren: 0.4,
-        staggerChildren: 1,
-        staggerDirection: -1,
-      },
-    },
-    animate: {
-      transition: {
-        delayChildren: 0,
-        staggerChildren: 0.11,
-        staggerDirection: 1,
-      },
-    },
-  };
-
   return (
-    <motion.div
-      className='container flex flex-col mx-auto text-center justify-center items-center pt-56 pb-40'
-      variants={containerVariants}
-      initial='initial'
-      animate='animate'>
-      <div className='overflow-hidden'>
-        <motion.div
-          variants={textVariants}
-          className='font-light tracking-wide text-text dark:text-textD text-[8.5rem] leading-[7rem] mb-2 mr-80 pr-40'>
-          MICHAL
-        </motion.div>
+    <section id='home'>
+      <div className='flex flex-col text-textD mx-auto justify-center items-center h-[100dvh] relative'>
+        <img
+          src={lines}
+          alt='Picture of abstract lines'
+          className='hero-image absolute opacity-0 max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[800px] w-[100vw] rotate-90 mr-20 lg:mr-60'
+        />
+        <div className='overflow-hidden -translate-x-20 lg:-translate-x-64'>
+          <div className='hero-title relative translate-y-full opacity-0 z-50 font-light tracking-wide dark:text-textD text-6xl sm:text-7xl md:text-8xl lg:text-9xl '>
+            Michal
+          </div>
+        </div>
+        <div className='overflow-hidden -translate-x-10 lg:-translate-x-40'>
+          <div className='hero-title relative translate-y-full z-50 font-light tracking-wide dark:text-textD text-6xl sm:text-7xl md:text-8xl lg:text-9xl pb-2'>
+            Ciberej
+          </div>
+        </div>
+        <div className='overflow-hidden translate-x-6 lg:translate-x-0'>
+          <div className='hero-title relative translate-y-full z-50 font-semibold tracking-wide dark:text-primary text-6xl sm:text-7xl md:text-8xl lg:text-9xl md:-mb-4 text-primary'>
+            Web
+          </div>
+        </div>
+        <div className='overflow-hidden translate-x-4 lg:translate-x-20'>
+          <div className='hero-title relative translate-y-full z-50 font-semibold tracking-wide dark:text-primary text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-primary'>
+            Developer
+          </div>
+        </div>
       </div>
-      <div className='overflow-hidden'>
-        <motion.div
-          variants={textVariants}
-          className='font-light tracking-wide text-text dark:text-textD text-[8.5rem] leading-[7rem] mr-40 mb-4'>
-          CIBEREJ
-        </motion.div>
-      </div>
-      <div className='overflow-hidden'>
-        <motion.div
-          variants={textVariants}
-          className='font-semibold tracking-wide text-text dark:text-primary text-[9rem] leading-[7rem] mb-2 '>
-          WEB
-        </motion.div>
-      </div>
-      <div className='overflow-hidden'>
-        <motion.div
-          variants={textVariants}
-          className='font-semibold tracking-wide text-text dark:text-primary text-[9rem] leading-[7rem] mb-2s ml-60'>
-          DEVELOPER
-        </motion.div>
-      </div>
-    </motion.div>
+    </section>
   );
 };
 
