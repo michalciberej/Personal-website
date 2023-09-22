@@ -3,37 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
-import Main from './pages/Main';
-import Contactme from './pages/Contactme';
-import Error from './pages/Error';
+import Error from './pages/404';
 import Thankyou from './pages/Thankyou';
-import Archive from './pages/Archive';
-import ScrollToTop from './components/ScrollToTop';
+import Resume from './pages/Resume';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Main />,
+    element: <Home />,
     errorElement: <Error />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: '/contactme',
-        element: <Contactme />,
-      },
-      {
-        path: '/thankyou',
-        element: <Thankyou />,
-      },
-    ],
   },
   {
-    path: '/archive',
-    element: [<ScrollToTop />, <Archive />],
-    errorElement: <Error />,
+    path: '/resume',
+    element: <Resume />,
+  },
+  {
+    path: '/thankyou',
+    element: <Thankyou />,
   },
 ]);
 
