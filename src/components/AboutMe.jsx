@@ -1,47 +1,146 @@
-import Skills from './Skills';
-import { Link } from 'react-router-dom';
-import Icon from '@mdi/react';
-import { mdiDownload } from '@mdi/js';
+import StyledLink from './StyledLink';
+import StyledButton from './StyledButton';
 import SectionHeading from './SectionHeading';
 import Socials from './Socials';
 
 const AboutMe = () => {
+  const handleContactScroll = (e) => {
+    e.preventDefault();
+    const element = document.querySelector('#contact');
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
-    <div className='container mx-auto flex items-center justify-between'>
-      <SectionHeading />
-      {/* <div className='grid grid-cols-1 md:grid-cols-2 gap-20 justify-center text-center md:text-left'>
-        <div className='group max-w-prose flex flex-col items-center mx-auto my-10 md:my-0'>
-          <h2 className="text-3xl text-center tracking-wider font-extrabold mb-12 before:block before:w-[calc(100%_+_1rem)] before:opacity-50 group-hover:before:opacity-100 before:h-1 before:content-[''] before:bg-accent before:absolute relative z-20 before:translate-y-8 before:-z-10 group-hover:before:h-4 group-hover:before:translate-y-6 before:-translate-x-[0.5rem] before:transition-all before:rounded-sm">
-            Get to know me!
-          </h2>
-          <p className='text-xl leading-2 font-normal mb-4 text-textD/90 '>
-            My journey to becoming self-thought frontend developer started in
-            2021 when I wanted to create myself an ecommerce website. After a
-            year of creating websites with WordPress and Prestashop.
-          </p>
-          <p className='text-xl leading-2 font-normal mb-12 '>
-            I decided to start learning how to code websites from scratch. Since
-            then I coded numerous sites.
-          </p>
-          <div className='flex justify-center gap-8'>
-            <Link
-              to='/contactme'
-              className='button inline-flex items-center gap-2 text-lg shadow-lg border-2 border-black dark:border-white hover:bg-black hover:dark:bg-white hover:text-white dark:hover:text-text focus:bg-black focus:focus:text-textD dark:focus:bg-white dark:focus:text-text'>
-              Contact me
-            </Link>
-            <Link
-              to='/resume'
-              className='button inline-flex items-center gap-2 text-lg shadow-lg border-2 border-black dark:border-white hover:bg-black hover:dark:bg-white hover:text-white dark:hover:text-text focus:bg-black focus:focus:text-textD dark:focus:bg-white dark:focus:text-text'>
-              View & Download CV
-              <Icon
-                path={mdiDownload}
-                size={0.8}
-              />
-            </Link>
+    <section id='about'>
+      <div className='flex flex-col items-start mx-[4vw] md:mx-[10vw] pb-0 md:pb-20 text-textD border-t-[2px] border-secondary'>
+        <SectionHeading num='01'>About</SectionHeading>
+        <div className='mb-20 md:pl-10 flex flex-col gap-8 w-full '>
+          <h3 className='text-2xl text tracking-normal'>
+            Hello there, I am Michal and I am a web dev.
+          </h3>
+          <span className='text-lg max-w-prose text-textD/80 tracking-wide'>
+            Since very young age I was fascinated by technology.
+          </span>
+          <div className='flex gap-4 justify-between'>
+            <StyledButton
+              border={'textD'}
+              func={handleContactScroll}>
+              Contact
+            </StyledButton>
+            <Socials
+              column={false}
+              black={false}
+            />
           </div>
         </div>
-        <Skills />
-      </div> */}
+        <Carousel />
+      </div>
+    </section>
+  );
+};
+
+const Carousel = () => {
+  return (
+    <div className='carousel-container'>
+      <div className='carousel-track track-two'>
+        <div className='carousel-card'>
+          <i className='devicon-react-original colored'></i>
+          <p>React</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-nextjs-original colored'></i>
+          <p>Next</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-tailwindcss-plain colored'></i>
+          <p>Tailwindcss</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-sass-original colored'></i>
+          <p>Sass</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-mongodb-plain colored'></i>
+          <p>MongoDB</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-git-plain colored'></i>
+          <p>Git</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-react-original colored'></i>
+          <p>React</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-nextjs-original colored'></i>
+          <p>Next</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-tailwindcss-plain colored'></i>
+          <p>Tailwindcss</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-sass-original colored'></i>
+          <p>Sass</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-mongodb-plain colored'></i>
+          <p>MongoDB</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-git-plain colored'></i>
+          <p>Git</p>
+        </div>
+      </div>
+      <div className='carousel-track track-one'>
+        <div className='carousel-card'>
+          <i className='devicon-express-original'></i>
+          <p>Express</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-jest-plain colored'></i>
+          <p>Jest</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-javascript-plain colored'></i>
+          <p>Javascript</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-typescript-plain colored'></i>
+          <p>Typescript</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-nodejs-plain colored'></i>
+          <p>NodeJS</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-webpack-plain colored'></i>
+          <p>Webpack</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-express-original'></i>
+          <p>Express</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-jest-plain colored'></i>
+          <p>Jest</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-javascript-plain colored'></i>
+          <p>Javascript</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-typescript-plain colored'></i>
+          <p>Typescript</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-nodejs-plain colored'></i>
+          <p>NodeJS</p>
+        </div>
+        <div className='carousel-card'>
+          <i className='devicon-webpack-plain colored'></i>
+          <p>Webpack</p>
+        </div>
+      </div>
     </div>
   );
 };
