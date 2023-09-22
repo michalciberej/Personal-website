@@ -1,10 +1,15 @@
-const SectionHeading = ({ text, children }) => {
+const SectionHeading = ({ black, num, children }) => {
   return (
     <>
-      <h1 className='mb-40 flex gap-2 items-end justify-center'>
-        <span className='text-xl text-accent'>01.</span>
-        <span className='text-4xl'>About me</span>
-      </h1>
+      <h2
+        className={`flex gap-2 items-end justify-center mb-16 mt-16 ${
+          black ? 'text-text' : 'text-textD'
+        }`}>
+        <span className={`text-xl ${black ? 'text-text' : 'text-primary'}`}>
+          {num}.
+        </span>
+        <span className='text-4xl'>{children}</span>
+      </h2>
     </>
   );
 };
