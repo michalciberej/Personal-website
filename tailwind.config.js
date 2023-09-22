@@ -8,7 +8,7 @@ export default {
         textD: "#f3f6f5",
         background: "#f3f6f5",
         backgroundD: "#242424",
-        primary: "#e4b381",
+        primary: "#F6D15A",
         secondary: "#4f4f4f",
         accent: "#ead6a6",
       },
